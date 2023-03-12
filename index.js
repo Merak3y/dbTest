@@ -5,18 +5,8 @@ const port = 3000
 
 app.use(cors())
 
-app.get('/sound/:name', (req, res) => {
-  const { name } = req.params
-    
-  console.log(name)
-
-  if(name == 'dog'){
-    res.json({'sound' : 'aa'})  
-  }
-  else{
-    res.json({'sound' : 'bb'})  
-  }
-  
+app.get('/', (req, res) => {
+  res.send('Hello World!')
 })
 
 app.listen(port, () => {
